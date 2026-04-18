@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/icon.png", type: "image/png" }],
+  },
   alternates: {
     canonical: "/",
   },
