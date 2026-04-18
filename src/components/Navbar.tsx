@@ -24,7 +24,7 @@ export function Navbar() {
           {site.name}
         </Link>
 
-        <div className="hidden items-center gap-8 font-headline font-bold tracking-tight md:flex">
+        <div className="hidden items-center gap-8 font-body md:flex">
           {nav.map((item) => {
             const isActive =
               item.href === "/"
@@ -35,10 +35,10 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={[
-                  "transition-colors",
+                  "text-sm font-bold uppercase tracking-widest transition-colors",
                   isActive
                     ? "border-b-2 border-primary pb-1 text-primary"
-                    : "text-on-surface-variant hover:text-primary",
+                    : "text-white hover:text-primary",
                 ].join(" ")}
               >
                 {item.label}

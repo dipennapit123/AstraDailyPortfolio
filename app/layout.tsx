@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/src/components/Footer";
 import { Navbar } from "@/src/components/Navbar";
 import { site } from "@/src/content/site";
 
-const inter = Inter({
-  variable: "--font-inter",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${manrope.variable} dark h-full antialiased`}
+      className={`${poppins.variable} dark h-full antialiased`}
     >
       <head>
         <link

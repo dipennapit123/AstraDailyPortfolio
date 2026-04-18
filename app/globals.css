@@ -61,9 +61,9 @@
   --radius-2xl: 1.5rem;
   --radius-full: 9999px;
 
-  --font-headline: var(--font-manrope);
-  --font-body: var(--font-inter);
-  --font-label: var(--font-inter);
+  --font-headline: var(--font-poppins);
+  --font-body: var(--font-poppins);
+  --font-label: var(--font-poppins);
 }
 
 body {
