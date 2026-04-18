@@ -6,6 +6,9 @@ import { site } from "@/src/content/site";
 export const metadata: Metadata = {
   title: "Screenshots",
   description: `Screenshots and UI gallery for ${site.name}.`,
+  alternates: {
+    canonical: "/screenshots",
+  },
 };
 
 export default function ScreenshotsPage() {

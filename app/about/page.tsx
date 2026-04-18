@@ -6,6 +6,9 @@ import { site } from "@/src/content/site";
 export const metadata: Metadata = {
   title: "About",
   description: `About ${site.name} — what the app does: sign in, pick your zodiac, and read daily horoscopes.`,
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const HERO_IMG =

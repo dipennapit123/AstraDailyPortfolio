@@ -5,6 +5,9 @@ import { site } from "@/src/content/site";
 export const metadata: Metadata = {
   title: "Blog",
   description: `Updates and articles from ${site.name}.`,
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogPage() {

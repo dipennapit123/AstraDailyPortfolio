@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/src/content/site";
 import { StoreBadgeButtons } from "@/src/components/StoreBadgeButtons";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: site.seo.homeTitle,
+  },
+  description: site.seo.homeDescription,
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const heroShowcase =
   site.screenshotGallery.find((s) => s.title === "Daily horoscope") ??

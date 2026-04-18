@@ -12,20 +12,42 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const siteOrigin = site.metadataBaseUrl.replace(/\/+$/, "");
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.metadataBaseUrl),
   title: {
-    default: site.name,
+    default: site.seo.defaultTitle,
     template: `%s | ${site.name}`,
   },
-  description: site.description,
+  description: site.seo.defaultDescription,
   applicationName: site.name,
+  keywords: [...site.seo.keywords],
   icons: {
     icon: [{ url: "/icon.png", type: "image/png" }],
     apple: [{ url: "/icon.png", type: "image/png" }],
   },
-  alternates: {
-    canonical: "/",
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: site.seo.defaultTitle,
+    description: site.seo.defaultDescription,
+    locale: "en_US",
+    url: siteOrigin,
+    images: [
+      {
+        url: site.seo.ogImagePath,
+        width: site.seo.ogImageWidth,
+        height: site.seo.ogImageHeight,
+        alt: `${site.name} — daily horoscope`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.seo.defaultTitle,
+    description: site.seo.defaultDescription,
+    images: [site.seo.ogImagePath],
   },
 };
 

@@ -5,6 +5,9 @@ import { toYoutubeEmbedUrl } from "@/src/lib/embed-youtube";
 export const metadata: Metadata = {
   title: "Demo",
   description: `Watch a short demo of ${site.name}.`,
+  alternates: {
+    canonical: "/demo",
+  },
 };
 
 export default function DemoPage() {

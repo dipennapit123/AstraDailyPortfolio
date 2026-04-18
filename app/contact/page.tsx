@@ -6,6 +6,9 @@ import { site } from "@/src/content/site";
 export const metadata: Metadata = {
   title: "Contact",
   description: `Contact the ${site.name} team.`,
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 const NEBULA_IMG =

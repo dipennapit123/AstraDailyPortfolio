@@ -5,6 +5,9 @@ import { site } from "@/src/content/site";
 export const metadata: Metadata = {
   title: "Features",
   description: `Features of ${site.name} — celestial insights, AI guidance, and your cosmic journey.`,
+  alternates: {
+    canonical: "/features",
+  },
 };
 
 export default function FeaturesPage() {

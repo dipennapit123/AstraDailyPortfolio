@@ -26,12 +26,82 @@ export type SiteHeroScreen = {
   height: number;
 };
 
+/** Twelve signs for `/horoscope/[sign]` SEO pages (slug = URL segment, lowercase). */
+export const zodiacSigns = [
+  { slug: "aries", label: "Aries" },
+  { slug: "taurus", label: "Taurus" },
+  { slug: "gemini", label: "Gemini" },
+  { slug: "cancer", label: "Cancer" },
+  { slug: "leo", label: "Leo" },
+  { slug: "virgo", label: "Virgo" },
+  { slug: "libra", label: "Libra" },
+  { slug: "scorpio", label: "Scorpio" },
+  { slug: "sagittarius", label: "Sagittarius" },
+  { slug: "capricorn", label: "Capricorn" },
+  { slug: "aquarius", label: "Aquarius" },
+  { slug: "pisces", label: "Pisces" },
+] as const;
+
+export type ZodiacSlug = (typeof zodiacSigns)[number]["slug"];
+
+export function getZodiacBySlug(slug: string) {
+  return zodiacSigns.find((z) => z.slug === slug);
+}
+
 export const site = {
   name: "AstraDaily",
   tagline: "Daily horoscopes with a calm, modern UI.",
   description:
     "AstraDaily is a horoscope app for quick daily insights, personalized by your zodiac sign.",
-  metadataBaseUrl: "https://example.com",
+  /**
+   * Production site origin (no trailing slash). Used for metadataBase, canonical URLs,
+   * Open Graph, sitemap, and robots. Set to your real domain (e.g. Vercel URL) before launch.
+   */
+  metadataBaseUrl: "https://astradaily.app",
+  /** SEO — titles, descriptions, and meta keywords (supporting signal; unique page copy matters most). */
+  seo: {
+    defaultTitle: "AstraDaily — Free daily horoscope app",
+    defaultDescription:
+      "Get a free daily horoscope in a calm, modern app. Read yesterday, today, and tomorrow for your zodiac sign—Aries through Pisces. Entertainment only.",
+    homeTitle: "Free daily horoscope app | AstraDaily",
+    homeDescription:
+      "AstraDaily: free daily horoscope for every sign. Quick readings, love, wealth, and health sections, and a clear UI. Download on the App Store or Google Play.",
+    /** Default Open Graph / Twitter preview image (path under public/). */
+    ogImagePath: "/hero/app-splash.png",
+    ogImageWidth: 508,
+    ogImageHeight: 1024,
+    keywords: [
+      "daily horoscope",
+      "free daily horoscope",
+      "horoscope app",
+      "zodiac horoscope",
+      "today horoscope",
+      "aries horoscope",
+      "taurus horoscope",
+      "gemini horoscope",
+      "cancer horoscope",
+      "leo horoscope",
+      "virgo horoscope",
+      "libra horoscope",
+      "libra daily horoscope",
+      "scorpio horoscope",
+      "sagittarius horoscope",
+      "capricorn horoscope",
+      "aquarius horoscope",
+      "pisces horoscope",
+      "aries daily horoscope",
+      "taurus daily horoscope",
+      "gemini daily horoscope",
+      "cancer daily horoscope",
+      "leo daily horoscope",
+      "virgo daily horoscope",
+      "scorpio daily horoscope",
+      "sagittarius daily horoscope",
+      "capricorn daily horoscope",
+      "aquarius daily horoscope",
+      "pisces daily horoscope",
+    ],
+  },
   contactEmail: "dipennapit45@gmail.com",
   /** Blog — use `/blog` for the on-site page or an external URL (e.g. Medium, Substack) */
   blogUrl: "/blog",
