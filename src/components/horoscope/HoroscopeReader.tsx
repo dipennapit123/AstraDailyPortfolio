@@ -195,7 +195,7 @@ export function HoroscopeReader({ sign }: Props) {
           Showing sample copy. Add{" "}
           <code className="rounded bg-black/30 px-1">ASTRADAILY_API_BASE_URL</code> to{" "}
           <code className="rounded bg-black/30 px-1">portfolio/.env.local</code>{" "}
-          (see <code className="rounded bg-black/30 px-1">.env.example</code>) pointing at the admin
+          (see your local env checklist) pointing at the admin
           app (different port than this site), e.g.{" "}
           <code className="rounded bg-black/30 px-1">http://127.0.0.1:3001</code> or{" "}
           <code className="rounded bg-black/30 px-1">http://127.0.0.1:3001/api</code> when portfolio
