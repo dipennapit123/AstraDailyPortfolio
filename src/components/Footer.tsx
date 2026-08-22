@@ -1,9 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/src/components/ui/Container";
 import { site } from "@/src/content/site";
 
 const product = [
   { href: "/", label: "Home" },
+  { href: "/app", label: "App" },
   { href: "/features", label: "Features" },
   { href: "/screenshots", label: "Screenshots" },
   { href: "/demo", label: "Demo" },
@@ -20,7 +22,15 @@ export function Footer() {
       <Container className="px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
-            <span className="mb-4 block text-xl font-bold text-primary">
+            <span className="mb-4 flex items-center gap-2 text-xl font-bold text-primary">
+              <Image
+                src="/brand-icon.png"
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-lg object-cover ring-1 ring-white/10"
+                unoptimized
+              />
               {site.name}
             </span>
             <p className="text-sm leading-relaxed text-on-surface-variant">

@@ -43,7 +43,7 @@ export function MobileAppPromo() {
           <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-5">
             <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-2xl ring-2 ring-primary/30 shadow-lg shadow-primary/20 sm:h-16 sm:w-16">
               <Image
-                src="/icon.png"
+                src="/brand-icon.png"
                 alt={`${site.name} app icon`}
                 width={64}
                 height={64}

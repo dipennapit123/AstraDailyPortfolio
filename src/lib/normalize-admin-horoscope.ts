@@ -101,13 +101,12 @@ export function parseSiteHoroscopeDay(raw: unknown): SiteHoroscopeDay | null {
 /** Safe parse — invalid/missing upstream payload yields all-null modes (not an HTTP error). */
 export function parseSiteHoroscopeBundle(raw: unknown): SiteHoroscopeBundle {
   if (!raw || typeof raw !== "object") {
-    return { yesterday: null, today: null, tomorrow: null };
+    return { yesterday: null, today: null };
   }
   const b = raw as Record<string, unknown>;
   return {
     yesterday: parseSiteHoroscopeDay(b.yesterday),
     today: parseSiteHoroscopeDay(b.today),
-    tomorrow: parseSiteHoroscopeDay(b.tomorrow),
   };
 }
 

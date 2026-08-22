@@ -18,9 +18,9 @@ export type MockHoroscope = {
   healthConfidence: number;
 };
 
-export type DayMode = "yesterday" | "today" | "tomorrow";
+export type DayMode = "yesterday" | "today";
 
-const MOCK: Record<ZodiacSlug, Record<DayMode, Omit<MockHoroscope, "zodiacSign" | "date">>> = {
+const MOCK: Record<ZodiacSlug, Record<"yesterday" | "today" | "tomorrow", Omit<MockHoroscope, "zodiacSign" | "date">>> = {
   aries: {
     yesterday: {
       title: "Quiet courage",
@@ -424,7 +424,6 @@ const MOCK: Record<ZodiacSlug, Record<DayMode, Omit<MockHoroscope, "zodiacSign" 
 const DAY_OFFSET: Record<DayMode, number> = {
   yesterday: -1,
   today: 0,
-  tomorrow: 1,
 };
 
 function dateForDay(day: DayMode): string {

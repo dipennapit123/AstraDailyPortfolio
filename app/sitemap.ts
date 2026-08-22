@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const pages = [
     "/",
+    "/app",
     "/features",
     "/screenshots",
     "/demo",
@@ -14,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy",
     "/blog",
-    "/horoscope",
   ];
 
   const staticEntries: MetadataRoute.Sitemap = pages.map((path) => ({

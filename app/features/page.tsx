@@ -98,14 +98,14 @@ export default function FeaturesPage() {
                 Join half a million souls finding their way.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/#download" aria-label="Download on iOS">
+                <Link href="/app#download" aria-label="Download on iOS">
                   <img
                     alt="App Store"
                     className="h-10 cursor-pointer"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5diR5SrJZl2s6NVsLzh2J10_crfuPQnzXK5SefRkVWJdmzjjRbOw1kaeoy1Q3cplM9gawQR1VFlzIU46Y10lh9A1tq_VXr65KC0AQxWUVGQWZZTLMFXDg9UQprtAWQD3E08b7cJ5oWpuq8hLK7FMcn1aUjcjgkY2ogUhfvoYseN2Rvwg1Lyg0yXB5mVyuT5jtE43S_jjxw_IBDpWH89gIfdw8Vc5wxn2w81RF9KtOewd_g9fYBFgnWo3FNVQGF_GZXJkzMOdLTQ"
                   />
                 </Link>
-                <Link href="/#download" aria-label="Download on Android">
+                <Link href="/app#download" aria-label="Download on Android">
                   <img
                     alt="Google Play"
                     className="h-10 cursor-pointer"

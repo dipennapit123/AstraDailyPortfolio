@@ -24,7 +24,6 @@ interface Props {
 const DAYS: { id: DayMode; label: string }[] = [
   { id: "yesterday", label: "Yesterday" },
   { id: "today", label: "Today" },
-  { id: "tomorrow", label: "Tomorrow" },
 ];
 
 const LONG_DATE = new Intl.DateTimeFormat("en-US", {
@@ -90,7 +89,7 @@ export function HoroscopeReader({ sign }: Props) {
   const [weekly, setWeekly] = useState<SiteWeekly>(null);
   /** Admin API URL is set (server env). */
   const [apiConfigured, setApiConfigured] = useState<boolean | null>(null);
-  /** At least one of yesterday / today / tomorrow returned from admin. */
+  /** At least one of yesterday / today returned from admin. */
   const [liveData, setLiveData] = useState(false);
   /** Fetch to admin failed (wrong port, admin down, etc.). */
   const [upstreamError, setUpstreamError] = useState(false);
@@ -219,9 +218,9 @@ export function HoroscopeReader({ sign }: Props) {
 
       {apiConfigured && !liveData && !upstreamError && (
         <p className="rounded-xl border border-sky-500/30 bg-sky-500/10 px-4 py-3 text-center text-xs text-sky-100 sm:text-sm">
-          API is configured, but no published horoscopes matched this sign for UTC
-          yesterday / today / tomorrow. Publish drafts in the admin app for this zodiac, then
-          refresh.
+          API is configured, but no published horoscopes matched this sign for
+          yesterday / today (Asia/Kathmandu). Generate (or publish) drafts in
+          the admin app for this zodiac and date, then refresh.
         </p>
       )}
 
@@ -253,11 +252,12 @@ export function HoroscopeReader({ sign }: Props) {
           <div className="mt-3 hidden flex-col items-center gap-3 sm:mt-4 sm:flex sm:flex-row sm:justify-start">
             <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-xl ring-2 ring-primary/30 shadow-md shadow-primary/20 sm:h-11 sm:w-11">
               <Image
-                src="/icon.png"
+                src="/brand-icon.png"
                 alt={`${site.name} app icon`}
                 width={44}
                 height={44}
                 className="h-full w-full object-cover"
+                unoptimized
               />
             </div>
             <div className="leading-tight">

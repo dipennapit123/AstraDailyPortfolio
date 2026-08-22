@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: turbopackRoot,
   },
+  async redirects() {
+    return [
+      { source: "/horoscope", destination: "/", permanent: true },
+    ];
+  },
   images: {
     remotePatterns: [
       {

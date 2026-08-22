@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Container } from "@/src/components/ui/Container";
@@ -8,7 +9,7 @@ import { site } from "@/src/content/site";
 
 const nav = [
   { href: "/", label: "Home" },
-  { href: "/horoscope", label: "Horoscope" },
+  { href: "/app", label: "App" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -40,8 +41,16 @@ export function Navbar() {
       <Container className="flex max-w-full items-center justify-between px-4 py-4 sm:px-6 md:px-8">
         <Link
           href="/"
-          className="font-headline text-2xl font-black tracking-tighter text-primary"
+          className="flex items-center gap-2 font-headline text-2xl font-black tracking-tighter text-primary"
         >
+          <Image
+            src="/brand-icon.png"
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-xl object-cover ring-1 ring-white/10"
+            unoptimized
+          />
           {site.name}
         </Link>
 
@@ -77,7 +86,7 @@ export function Navbar() {
         </div>
 
         <Link
-          href="/#download"
+          href="/app#download"
           className="pulsar-btn hidden rounded-full px-6 py-2 font-headline font-bold text-on-primary-fixed hover:opacity-80 transition-opacity duration-300 md:inline-flex"
         >
           Get App
@@ -112,7 +121,7 @@ export function Navbar() {
                   </Link>
                 ))}
                 <Link
-                  href="/#download"
+                  href="/app#download"
                   onClick={() => setOpen(false)}
                   className="mt-2 inline-flex items-center justify-center rounded-xl bg-primary px-4 py-3 font-headline text-sm font-bold text-on-primary-fixed"
                 >

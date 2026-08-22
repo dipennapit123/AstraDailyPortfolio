@@ -30,8 +30,8 @@ const appCapabilities = [
   },
   {
     icon: "calendar_today" as const,
-    title: "Yesterday, today & tomorrow",
-    body: "Jump between adjacent days to compare or catch up on your daily text.",
+    title: "Yesterday and today",
+    body: "Jump between yesterday and today to catch up on your daily text.",
   },
   {
     icon: "favorite" as const,
@@ -46,7 +46,7 @@ const appCapabilities = [
   {
     icon: "tune" as const,
     title: "Settings",
-    body: "Adjust theme and your default day (for example opening on today vs. tomorrow).",
+    body: "Adjust theme and your default day (for example opening on today vs. yesterday).",
   },
 ];
 

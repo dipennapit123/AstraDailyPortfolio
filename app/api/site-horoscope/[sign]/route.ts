@@ -63,7 +63,6 @@ export async function GET(
   let bundle: SiteHoroscopeBundle = {
     yesterday: null,
     today: null,
-    tomorrow: null,
   };
   let weekly: SiteWeekly = null;
 
@@ -99,7 +98,7 @@ export async function GET(
     }
   }
 
-  const modes = [bundle.yesterday, bundle.today, bundle.tomorrow];
+  const modes = [bundle.yesterday, bundle.today];
   const liveData = modes.some((row) => row != null && typeof row === "object");
 
   return NextResponse.json({
