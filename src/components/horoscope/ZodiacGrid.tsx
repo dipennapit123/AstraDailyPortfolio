@@ -2,7 +2,7 @@ import Link from "next/link";
 import { zodiacSigns } from "@/src/content/site";
 import { ZodiacAvatar } from "./ZodiacAvatar";
 
-/** 4-column responsive grid of all 12 zodiac signs (selector for `/horoscope`). */
+/** 4-column responsive grid of all 12 zodiac signs (selector on `/`). */
 export function ZodiacGrid() {
   return (
     <ul className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">

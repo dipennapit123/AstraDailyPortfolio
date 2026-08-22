@@ -103,7 +103,7 @@ export default function DemoPage() {
               Join 50k+ seekers grounding their daily journey in cosmic rhythm.
             </p>
             <Link
-              href="/#download"
+              href="/app#download"
               className="block w-full rounded-xl bg-primary py-3 text-center font-bold text-on-primary-fixed transition-transform hover:scale-[1.02]"
             >
               Start Free Trial

@@ -23,10 +23,10 @@ export default function NotFound() {
             Home
           </Link>
           <Link
-            href="/horoscope"
+            href="/app"
             className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-5 py-3 font-headline text-sm font-bold text-on-surface hover:bg-white/10"
           >
-            Horoscope
+            App
           </Link>
         </div>
 

@@ -32,7 +32,6 @@ export type SiteHoroscopeDay = {
 export type SiteHoroscopeBundle = {
   yesterday: SiteHoroscopeDay | null;
   today: SiteHoroscopeDay | null;
-  tomorrow: SiteHoroscopeDay | null;
 };
 
 export type SiteWeekly = {

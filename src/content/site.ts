@@ -79,10 +79,10 @@ export const site = {
   seo: {
     defaultTitle: "AstraDaily — Free daily horoscope app",
     defaultDescription:
-      "Get a free daily horoscope in a calm, modern app. Read yesterday, today, and tomorrow for your zodiac sign—Aries through Pisces. Entertainment only.",
-    homeTitle: "Free daily horoscope app | AstraDaily",
+      "Get a free daily horoscope in a calm, modern app. Read yesterday and today for your zodiac sign—Aries through Pisces. Entertainment only.",
+    homeTitle: "Free daily horoscopes | AstraDaily",
     homeDescription:
-      "AstraDaily: free daily horoscope for every sign. Quick readings, love, wealth, and health sections, and a clear UI. Download on the App Store or Google Play.",
+      "AstraDaily: free daily horoscope for every sign. Read yesterday and today, with Love, Career, and Health. Download the app for the full experience.",
     /** Default Open Graph / Twitter preview image (path under public/). */
     ogImagePath: "/hero/app-splash.png",
     ogImageWidth: 508,
@@ -174,9 +174,9 @@ export const site = {
     {
       title: "Splash",
       description:
-        "A calm entry with the zodiac wheel, loading state, and clear AI entertainment disclaimer.",
+        "Light brand splash with the AstraDaily mark, zodiac chips, and daily horoscope headline.",
       src: "/screenshots/gallery/splash.png",
-      alt: "AstraDaily splash screen with zodiac wheel",
+      alt: "AstraDaily current splash screen",
       width: 576,
       height: 1024,
     },
@@ -185,25 +185,25 @@ export const site = {
       description:
         "Pick from all twelve signs—your choice drives the horoscope you see.",
       src: "/screenshots/gallery/select-sign.png",
-      alt: "AstraDaily select zodiac sign screen",
+      alt: "AstraDaily current select zodiac sign screen",
       width: 576,
       height: 1024,
     },
     {
       title: "Daily horoscope",
       description:
-        "Read for your sign and switch between yesterday, today, and tomorrow.",
+        "Read for your sign and switch between yesterday and today.",
       src: "/screenshots/gallery/daily-horoscope.png",
-      alt: "AstraDaily daily horoscope with day toggle",
+      alt: "AstraDaily current daily horoscope with yesterday and today",
       width: 576,
       height: 1024,
     },
     {
-      title: "Love, career & wealth",
+      title: "Love, career & health",
       description:
         "Structured sections for the areas that matter—still AI-generated for entertainment.",
       src: "/screenshots/gallery/love-career-wealth.png",
-      alt: "AstraDaily horoscope sections for love, career, and wealth",
+      alt: "AstraDaily current love, career, and health reading",
       width: 576,
       height: 1024,
     },

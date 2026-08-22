@@ -101,7 +101,7 @@ export default function PrivacyPage() {
                 of readings you have viewed
               </li>
               <li>
-                Which days you view (for example yesterday, today, or tomorrow)
+                Which days you view (for example yesterday or today)
                 and interactions with the horoscope screen (such as refresh)
               </li>
               <li>

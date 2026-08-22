@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   site,
@@ -8,6 +7,7 @@ import {
   getZodiacBySlug,
 } from "@/src/content/site";
 import { HoroscopeReader } from "@/src/components/horoscope/HoroscopeReader";
+import { SignSwitcherBar } from "@/src/components/horoscope/SignSwitcherBar";
 import { StoreBadgeButtons } from "@/src/components/StoreBadgeButtons";
 
 type PageProps = {
@@ -28,7 +28,7 @@ export async function generateMetadata({
   }
   const signLower = z.label.toLowerCase();
   const title = `${z.label} daily horoscope`;
-  const description = `Free ${z.label} daily horoscope in the ${site.name} app. Read today's forecast, switch between yesterday and tomorrow, and explore Love, Career, and Health.`;
+  const description = `Free ${z.label} daily horoscope in the ${site.name} app. Read today's forecast, switch between yesterday and today, and explore Love, Career, and Health.`;
   const keywords = [
     `${signLower} horoscope`,
     `${signLower} daily horoscope`,
@@ -67,14 +67,7 @@ export default async function HoroscopeSignPage({ params }: PageProps) {
 
   return (
     <main className="relative z-10 mx-auto max-w-3xl px-4 pb-16 pt-24 lg:max-w-4xl sm:px-6 sm:pb-24 sm:pt-28 md:pt-32 text-on-surface">
-      <p className="mb-6 sm:mb-8">
-        <Link
-          href="/horoscope"
-          className="inline-flex min-h-11 items-center gap-1 text-sm font-medium text-on-surface-variant touch-manipulation transition-colors hover:text-primary"
-        >
-          <span aria-hidden>&larr;</span> Back to all signs
-        </Link>
-      </p>
+      <SignSwitcherBar currentSlug={z.slug} />
 
       <HoroscopeReader sign={z} />
 

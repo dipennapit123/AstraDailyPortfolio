@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   applicationName: site.name,
   keywords: [...site.seo.keywords],
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/icon.png", type: "image/png" }],
+    icon: [{ url: "/brand-icon.png", type: "image/png" }],
+    apple: [{ url: "/brand-icon.png", type: "image/png" }],
   },
   openGraph: {
     type: "website",
