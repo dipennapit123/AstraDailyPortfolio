@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Suspense } from "react";
 import { AnalyticsTracker } from "@/src/components/AnalyticsTracker";
@@ -52,6 +53,9 @@ export const metadata: Metadata = {
     description: site.seo.defaultDescription,
     images: [site.seo.ogImagePath],
   },
+  other: {
+    "google-adsense-account": "ca-pub-4789180586769330",
+  },
 };
 
 export default function RootLayout({
@@ -68,6 +72,14 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
+        {/* Google AdSense site verification + ads loader */}
+        <Script
+          id="adsense-init"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789180586769330"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
         />
       </head>
       <body className="min-h-full flex flex-col bg-black text-on-surface font-body selection:bg-primary selection:text-on-primary">
